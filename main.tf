@@ -1,4 +1,18 @@
 terraform {
+  #backend "remote" {
+  #  hostname = "app.terraform.io"
+  #  organization = "realgenie-demo"
+
+  #  workspaces {
+  #    name = "terra-house-1"
+  #  }
+  #}
+  cloud {
+    organization = "realgenie-demo"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
   required_providers {
     random = {
       source = "hashicorp/random"
@@ -11,6 +25,8 @@ terraform {
   }
 }
 
+provider "aws" {
+}
 provider "random" {
   # Configuration options
 }
@@ -22,8 +38,6 @@ resource "random_string" "bucket_name" {
   length   = 32
   special  = false
 }
-
-
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 resource "aws_s3_bucket" "example" {
