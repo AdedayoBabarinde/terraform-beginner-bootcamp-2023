@@ -3,10 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payday</title>
+    <title>Jollof Rice Recipe</title>
 </head>
 <body>
-    <h1>Making my own payday bars</h1>
-    <img src="/assets/payday-box.jpg" width="300px" />
+    <!-- Introduction Page -->
+    <section id="introduction" style="display: block;">
+        <h1>Introduction to Jollof Rice</h1>
+        <img src="/assets/jollof.jpg" width="300px" alt="Jollof Rice" />
+        <p>Jollof rice is a popular West African dish known for its delicious blend of rice, tomatoes, and spices...</p>
+        <button onclick="showIngredients()">View Ingredients</button>
+    </section>
+
+    <!-- Ingredients Page -->
+    <section id="ingredients" style="display: none;">
+        <h1>Ingredients for Jollof Rice</h1>
+        <img src="/assets/recipe.jpg" width="300px" alt="Ingredients" />
+        <ul>
+            <li>2 cups long-grain parboiled rice</li>
+            <li>1 can (400g) of chopped tomatoes or tomato sauce</li>
+            <li>1 onion, finely chopped</li>
+            <li>1 red bell pepper, diced</li>
+            <li>1 green bell pepper, diced</li>
+            <li>3-4 tablespoons of vegetable oil</li>
+            <li>1 teaspoon of ginger, grated or minced</li>
+            <li>1 scotch bonnet pepper or hot pepper (adjust to your spice preference)</li>
+            <li>1 teaspoon of thyme</li>
+            <li>1 teaspoon of curry powder</li>
+            <li>1 teaspoon of paprika</li>
+            <li>Salt and pepper to taste</li>
+            <!-- Include other ingredients here -->
+        </ul>
+        <button onclick="showIntroduction()">Back to Introduction</button>
+        <button onclick="showInstructions()">View Instructions</button>
+    </section>
+
+    <!-- Instructions Page -->
+    <section id="instructions" style="display: none;">
+        <h1>Instructions for Making Jollof Rice</h1>
+        <img src="/assets/recipe.jpg" width="300px" alt="Instructions" />
+        <ol>
+            <li>If using chicken or another protein, season it with salt, pepper, and your choice of spices...</li>
+            <li>Heat the vegetable oil in a large pan or pot over medium heat. Add the chopped onions and sauté until they become translucent.</li>
+            <li>Add the diced red and green bell peppers, minced garlic, and grated ginger. Stir for a few minutes until the peppers soften. </li>
+            <li>Stir in the tomato sauce or chopped tomatoes and cook for about 5-7 minutes, allowing the flavors to meld together.</li>
+            <li>Wash the rice thoroughly to remove excess starch. Drain the water and add the rice to the pot. Stir to ensure the rice is well coated with the tomato mixture.</li>
+            <li>Reduce the heat to low, cover the pot with a tight-fitting lid, and allow the rice to cook for about 20-25 minutes. Avoid stirring the rice during this time to prevent it from becoming mushy.</li>
+            <li>Once the rice is cooked, let it rest for a few minutes before serving.</li>
+            <!-- Include step-by-step instructions here -->
+        </ol>
+        <button onclick="showIngredients()">Back to Ingredients</button>
+    </section>
+
+    <script>
+        function showIntroduction() {
+            document.getElementById("introduction").style.display = "block";
+            document.getElementById("ingredients").style.display = "none";
+            document.getElementById("instructions").style.display = "none";
+        }
+
+        function showIngredients() {
+            document.getElementById("introduction").style.display = "none";
+            document.getElementById("ingredients").style.display = "block";
+            document.getElementById("instructions").style.display = "none";
+        }
+
+        function showInstructions() {
+            document.getElementById("introduction").style.display = "none";
+            document.getElementById("ingredients").style.display = "none";
+            document.getElementById("instructions").style.display = "block";
+        }
+    </script>
 </body>
 </html>

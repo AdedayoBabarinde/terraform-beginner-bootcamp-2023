@@ -36,12 +36,9 @@ module "home_arcanum_hosting" {
 }
 
 resource "terratowns_home" "home" {
-  name = "How to play Arcanum in 2023!"
+  name = "How to Prepare Jollof Rice!"
   description = <<DESCRIPTION
-Arcanum is a game from 2001 that shipped with alot of bugs.
-Modders have removed all the originals making this game really fun
-to play (despite that old look graphics). This is my guide that will
-show you how to play arcanum without spoiling the plot.
+"Jollof rice is a popular West African dish known for its delicious blend of rice, tomatoes, and spices."
 DESCRIPTION
   domain_name = module.home_arcanum_hosting.domain_name
   town = "missingo"
@@ -56,13 +53,11 @@ module "home_payday_hosting" {
 }
 
 resource "terratowns_home" "home_payday" {
-  name = "Making your Payday Bar"
+  name = "How to Prepare Jollof Rice!"
   description = <<DESCRIPTION
-Since I really like Payday candy bars but they cost so much to import
-into Canada, I decided I would see how I could my own Paydays bars,
-and if they are most cost effective.
+"Jollof rice is a popular West African dish known for its delicious blend of rice, tomatoes, and spices."
 DESCRIPTION
   domain_name = module.home_payday_hosting.domain_name
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.payday.content_version
 }
